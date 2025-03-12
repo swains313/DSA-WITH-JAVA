@@ -32,23 +32,23 @@ public class Insertion {
 
 	public static void main(String[] args) {
 		
-		int arr[]= {2,1,22,3,5,6,1};
+		int arr[]= {2,22,3,1,5,6,1};
 		insertionSort(arr);
 
 	}
 
 	private static void insertionSort(int[] arr) {
 		
-		for (int i = 1; i < arr.length; i++) {
+		for (int i = 1; i < arr.length; i++) { // [1, 2, 3, 22, 5, 6, 1]
 			int key = arr[i];
 			int j = i-1;
+			System.out.println(Arrays.toString(arr)+" "+ i);
 			while( j >= 0 && arr[j] >= key) {
 				System.out.println(j);
 				arr[j+1]=arr[j];
 				j--;
 			}
 			arr[j+1]=key;
-			System.out.println(Arrays.toString(arr));
 		}
 		
 		System.out.println(Arrays.toString(arr));
